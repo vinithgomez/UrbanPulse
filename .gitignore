@@ -1,0 +1,26 @@
+# Data outputs -- large, regeneratable by running the pipeline (see
+# README > How to Run Locally). Figures are the exception: kept in the
+# repo since they're small and worth seeing without running anything.
+data/raw/*.csv
+data/raw/*.json
+data/processed/*.csv
+data/processed/*.json
+!data/processed/figures/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+venv/
+.env
+.ipynb_checkpoints/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

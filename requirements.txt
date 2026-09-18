@@ -1,0 +1,17 @@
+# Pinned to the exact versions used to build and test this project, via
+# `pip freeze` in the project's own venv, filtered to only the packages
+# actually imported somewhere in src/, app/, or tests/ (i.e. not every
+# transitive dependency those libraries pull in). Python 3.14.3.
+#
+# Re-generate with: pip freeze | grep -iE '^(pandas|requests|numpy|scipy|statsmodels|matplotlib|prophet|lightgbm|streamlit|plotly|pytest)=='
+pandas==3.0.6
+requests==2.34.2
+numpy==2.5.3
+scipy==1.18.1
+statsmodels==0.15.0    # seasonal decomposition, ADF test, ARIMA
+matplotlib==3.11.2     # EDA plots (decomposition, CCF)
+prophet==1.4.0          # classical forecasting baseline (Phase 4)
+lightgbm==4.7.0         # ML forecasting baseline (Phase 5)
+streamlit==1.64.0       # viewer app (Phase 7)
+plotly==7.1.0           # interactive charts in the viewer app (Phase 7)
+pytest==9.1.1           # test suite (tests/)
